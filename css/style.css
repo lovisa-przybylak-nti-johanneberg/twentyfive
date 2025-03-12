@@ -1,13 +1,16 @@
+/*Generell CSS*/
 body{
     font-family: "Titillium Web", sans-serif;
     font-weight: 400;
     font-style: normal;
     display: grid;
+    grid-template-rows: auto 80vh auto 40vh;
     background-color: blue;
 } 
 
 header{
     background-color: aqua;
+    display: flex;
 }
 
 section{
@@ -18,6 +21,12 @@ footer{
     background-color: brown;
 }
 
+#main{
+    background-image: url(../img/hosgrillning2.jpg);
+    background-position: center;
+}
+
+/*Allt nedan är för hamburgermenyn*/
 #nav-icon{
   width: 60px;
   height: 45px;
@@ -91,7 +100,3 @@ footer{
     left: 50%;
 }
   
-
-#main{
-    background-color: green;
-}
