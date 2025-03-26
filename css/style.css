@@ -8,25 +8,32 @@
 
 body{
     display: grid;
-    grid-template-rows: auto 10vh 80vh auto 25vh;
+    grid-template-rows: 12vh 10vh 80vh auto 25vh;
 } 
 
 header{
-    background-color: aqua;
     display: flex;
-
+    background-image: url(../img/banner_main.png);
+    background-size: cover;
 }
 
 nav{
     padding: 1rem;
+    font-size: 1.2rem;
     display: flex;
-    background-color: purple;
+    background-color: #981885;
     align-items: center;
     gap: 0.5%;
+    justify-content: space-evenly;
+
 }
 
 section{
-    background-color: coral;
+    background-color: white;
+}
+
+h2{
+
 }
 
 footer{
@@ -71,7 +78,7 @@ nav a:hover{
     font-size: 24px;
     font-weight: bold;
     color: white;
-    background-color: darkorchid;
+    background-color: #981885;
     border: none;
     border-radius: 20px;
     text-decoration: none;
@@ -82,4 +89,3 @@ nav a:hover{
     background-color: fuchsia;
     transform: scale(1.05);
 }
-
