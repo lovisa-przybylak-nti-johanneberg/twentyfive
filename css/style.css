@@ -8,8 +8,17 @@
 
 body{
     display: grid;
-    grid-template-rows: 12vh 10vh 80vh auto 25vh;
+    grid-template-rows: 12vh 10vh auto auto auto auto 35vh;
 } 
+
+.maincontainer{
+    grid-template-rows: 12vh 10vh 80vh auto auto 35vh;
+
+}
+
+a{
+    text-decoration: none;
+}
 
 header{
     display: flex;
@@ -28,30 +37,93 @@ nav{
 
 }
 
+h1{
+    padding: 1rem;
+    color: #981885;
+    text-align: center;
+}
+
 section{
     background-color: white;
+    color:  #981885;
+    padding: 30px;
+
 }
 
-h2{
+section h2{
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 
 }
+
+section a{
+    color: #981885;
+}
+
+
+
 
 footer{
-    background-color: brown;
+    background-color: #1a192a;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+footer h3{
+    font-weight: bold;
+}
+
+footer div{
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+footer a{
+    color: white;
+    font-weight: bold;
+}
+
+footer a:hover{
+    color: #c894ff;
 }
 
 nav a{
-    text-decoration: none;
-    outline-color: transparent;
     text-align: center;
-    line-height: 4;
+    line-height: 3;
+    transition: all 0.3s ease-in-out;
+    height: 10vh;
+    width: 100px;
+    border-radius: 10px;
 }
 
 nav a:link, a:visited, a:focus{
     color: white;
 }
 nav a:hover{
-    color: rgb(247, 94, 247);
+    border-radius: 10px;
+    background-color: fuchsia;
+}
+
+.bilder{
+    background-color: #981885;
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.bilder img{
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
 }
 
 .main{
@@ -59,23 +131,100 @@ nav a:hover{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-   
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: relative;
+    text-align: center;
+    width: 100%;
 }
 
+.graybox {
+    z-index: 4;
+    width: 100%;
+    height: 100%;
+    background-color: #62325b;
+    opacity: 0.5;
+    position: absolute;
+}
+
+.styrelsebilder {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    gap: 20px;
+}
+
+.styrelsebilder img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.event{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.eventbilder{
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    transition: filter 0.1s ease-in-out;
+    width: 100%;
+}
+
+.image-container:hover img {
+    filter: blur(2px);
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+
 #main-text{
+    z-index: 5;
+    position: relative;
     margin-bottom: 40px;
     font-size: 50px;
     color: white;
     text-decoration: none;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 #knapp{
+    z-index: 5;
+    position: relative;
     padding: 20px 40px;
-    font-size: 24px;
+    font-size: 23px;
     font-weight: bold;
     color: white;
     background-color: #981885;
@@ -87,5 +236,22 @@ nav a:hover{
 
 #knapp:hover{
     background-color: fuchsia;
-    transform: scale(1.05);
+}
+
+#orgnummer{
+    font-size: smaller;
+    font-weight: 100;
+}
+
+#styrelsen{
+    color: #981885;
+    font-weight: bold;
+}
+
+#helastyrelsen{
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    justify-self: center;
 }
