@@ -1,6 +1,7 @@
 /*Generell CSS*/
 *{
     margin: 0;
+    padding: 0;
     font-family: "Titillium Web", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -61,9 +62,6 @@ section a{
     color: #981885;
 }
 
-
-
-
 footer{
     background-color: #1a192a;
     color: white;
@@ -104,6 +102,61 @@ nav a:link, a:visited, a:focus{
 nav a:hover{
     border-radius: 10px;
     background-color: fuchsia;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    padding: 1rem;
+    position: absolute; 
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;    
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.hamburger span:nth-child(1) {
+    top: 0px;
+}
+  
+.hamburger span:nth-child(2),#nav-icon3 span:nth-child(3) {
+    top: 18px;
+}
+  
+.hamburger span:nth-child(4) {
+    top: 36px;
+}
+  
+.hamburger.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
+}
+  
+.hamburger.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+  
+.hamburger.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+  
+.hamburger.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%;
 }
 
 .bilder{
@@ -254,4 +307,104 @@ nav a:hover{
     object-fit: cover;
     border-radius: 10px;
     justify-self: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*Responsiv sida*/
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 470px) {
+    *{
+        font-weight: 300;
+    }
+    
+    body{
+        display: grid;
+        grid-template-rows: 12vh auto auto auto 35vh;
+    } 
+
+    .maincontainer{
+        grid-template-rows: 12vh auto 80vh auto auto 35vh;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: auto;
+        flex-direction: column;
+        background-color: #981885;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .main{
+        background-image: url(../img/folk_vid_grill\(kyssfrågetecken\).jpg);
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        width: 100%;
+    }
+    
+    .graybox {
+        z-index: 4;
+        width: 100%;
+        height: 100%;
+        background-color: #62325b;
+        opacity: 0.5;
+        position: absolute;
+    }
+    
+    #main-text{
+        z-index: 5;
+        position: relative;
+        margin-bottom: 30px;
+        font-size: 27px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    }
+    
+    #knapp{
+        z-index: 5;
+        position: relative;
+        padding: 20px 40px;
+        font-size: 17px;
+        font-weight: bold;
+        color: white;
+        background-color: #981885;
+        border: none;
+        border-radius: 20px;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
 }

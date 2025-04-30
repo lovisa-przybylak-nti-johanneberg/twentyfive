@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
+    
     document.querySelectorAll(".styrelsebilder img").forEach(img => {
         let container = document.createElement("div");
         container.classList.add("image-container");
@@ -10,6 +11,13 @@ document.addEventListener("DOMContentLoaded", function() {
         img.parentNode.insertBefore(container, img);
         container.appendChild(img);
         container.appendChild(text);
-    });
+    }); 
 });
+
+function toggleMenu() {
+    document.querySelector('nav').classList.toggle('active');
+    document.querySelector('.hamburger').classList.toggle('open');
+}
+
+  
 
