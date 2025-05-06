@@ -358,7 +358,7 @@ nav a:hover{
     } 
 
     .maincontainer{
-        grid-template-rows: 12vh auto 80vh auto auto 35vh;
+        grid-template-rows: 12vh auto 80vh auto auto auto 35vh;
     }
     
     .hamburger {
