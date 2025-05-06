@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         let text = document.createElement("span");
         text.classList.add("image-text");
-        text.innerText = img.alt; // Använd alt-texten för att fylla texten
+        text.innerText = img.alt;
 
         img.parentNode.insertBefore(container, img);
         container.appendChild(img);
@@ -17,7 +17,4 @@ document.addEventListener("DOMContentLoaded", function() {
 function toggleMenu() {
     document.querySelector('nav').classList.toggle('active');
     document.querySelector('.hamburger').classList.toggle('open');
-}
-
-  
-
+  }
