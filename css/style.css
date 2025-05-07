@@ -44,6 +44,10 @@ h1{
     text-align: center;
 }
 
+h3{
+    font-weight: 600;
+}
+
 section{
     background-color: white;
     color:  #981885;
@@ -191,7 +195,7 @@ nav a:hover{
 
 .bilder img{
     width: 100%;
-    max-width: 400px;
+    max-width: 390px;
     height: auto;
     object-fit: cover;
     border-radius: 5px;
@@ -232,6 +236,10 @@ nav a:hover{
     height: auto;
     object-fit: cover;
     border-radius: 10px;
+}
+
+#hidden{
+    display: none;
 }
 
 .event{
@@ -278,6 +286,10 @@ nav a:hover{
 
 .image-container:hover .image-text {
     opacity: 1;
+}
+
+.utskott{
+    padding-bottom: 1rem;
 }
 
 
@@ -354,7 +366,7 @@ nav a:hover{
     
     body{
         display: grid;
-        grid-template-rows: 12vh auto auto auto 35vh;
+        grid-template-rows: 12vh auto auto auto auto auto 35vh;
     } 
 
     .maincontainer{
@@ -403,6 +415,26 @@ nav a:hover{
         opacity: 0.5;
         position: absolute;
     }
+
+    .event{
+        display: block;
+        gap: 1rem;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+    .eventbilder{
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .event p{
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
     
     #main-text{
         z-index: 5;
@@ -424,5 +456,30 @@ nav a:hover{
         border-radius: 20px;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
+    }
+
+    .styrelsebilder {
+        display: flex;
+        flex-direction: column;
+        gap: auto;
+    }
+
+    .styrelsebilder img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    #helastyrelsen{
+        width: 90%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+        justify-self: center;
+    }
+
+    #hidden{
+        display: block;
     }
 }
